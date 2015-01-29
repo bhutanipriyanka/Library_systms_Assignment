@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html>
+<%= link_to "go to book form", "create_book"%> 
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 20px;
+    text-align: left;    
+}
+</style>
+</head>
+
+<body>
+  <center>
+    <h2>Table records for Books:</h2>
+      <table style="width:40%">
+       <tr>
+          <th>Name_of_book</th>
+          <th>Quantity</th>
+          <th>Balance</th>
+          <th colspan="2">Action Performed</th>
+        </tr>
+    <% @book.each do |i| %>
+      <tr>
+          <td><%= i.name_of_book%></td>
+          <td><%= i.quantity%></td>
+          <td><%= i.balance%></td>
+          <td> <%= link_to "edit", "book_table"%> / <%= link_to "destroy", "book_table"%>
+          <% end%>
+      </tr>
+      </table>
+    </center>
+  </body>
+</html>

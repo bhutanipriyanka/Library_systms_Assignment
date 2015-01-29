@@ -1,0 +1,15 @@
+<html>
+  <head><center><b><h1>BOOK RECORD</b></center>
+   <title>  </title>
+    <body>
+      <form name="myform" action= "/save_book" method="post">
+       <pre>
+       <h1><b>Name_of_book : <%= text_field_tag :name_of_book %></b></h1>
+       <h1><b>Balance      : <%= text_field_tag :balance %></b></h1>
+       <h1><b>Quantity     : <%= text_field_tag :quantity %></b></h1><br>
+       </pre><%= submit_tag("Save_changes") %>
+      </form>
+    </body>
+  </head>
+</html>
+
